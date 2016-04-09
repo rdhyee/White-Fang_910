@@ -1,0 +1,79 @@
+_repo: White-Fang_910
+_version: 0.0.1
+creator:
+  author:
+    agent_name: London, Jack
+    alias: Chaney, John Griffith
+    birthdate: 1876
+    deathdate: 1916
+    gutenberg_agent_id: '120'
+    url: http://www.gutenberg.org/2009/agents/120
+    wikipedia: http://en.wikipedia.org/wiki/Jack_London
+description: "This article is about the novel. For films and other uses, see White\
+  \ Fang (disambiguation).\nWhite Fang is a novel by American author Jack London (1876–1916)\
+  \ — and the name of the book's eponymous character, a wild wolfdog. First serialized\
+  \ in Outing magazine, it was published in 1906. The story takes place in Yukon Territory,\
+  \ Canada, during the 1890s Klondike Gold Rush and details White Fang's journey to\
+  \ domestication. It is a companion novel (and a thematic mirror) to London's best-known\
+  \ work, The Call of the Wild, which is about a kidnapped, domesticated dog embracing\
+  \ his wild ancestry to survive and thrive in the wild.\nMuch of White Fang is written\
+  \ from the viewpoint of the titular canine character, enabling London to explore\
+  \ how animals view their world and how they view humans. White Fang examines the\
+  \ violent world of wild animals and the equally violent world of humans. The book\
+  \ also explores complex themes including morality and redemption.\nWhite Fang has\
+  \ been adapted for the screen numerous times, including a 1991 film starring Ethan\
+  \ Hawke.\n From Wikipedia (CC BY-SA)."
+gutenberg_bookshelf:
+- Adventure
+- Movie Books
+gutenberg_issued: '1997-05-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '910'
+  wikidata: Q152267
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Wolfdogs -- Fiction'
+- !lcc 'PS'
+- !lcsh 'Adventure stories'
+- !lcsh 'Canada, Northern -- Fiction'
+- GITenberg
+title: White Fang
+url: http://www.gutenberg.org/ebooks/910
+wikipedia:
+- https://fi.wikipedia.org/wiki/Valkohammas_(romaani)
+- https://fa.wikipedia.org/wiki/%D8%B3%D9%BE%DB%8C%D8%AF%D8%AF%D9%86%D8%AF%D8%A7%D9%86
+- https://bg.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B8%D1%8F_%D0%B7%D1%8A%D0%B1
+- https://vi.wikipedia.org/wiki/Nanh_Tr%E1%BA%AFng
+- https://uk.wikipedia.org/wiki/%D0%91%D1%96%D0%BB%D0%B5_%D0%86%D0%BA%D0%BB%D0%BE
+- https://el.wikipedia.org/wiki/%CE%9F_%CE%91%CF%83%CF%80%CF%81%CE%BF%CE%B4%CF%8C%CE%BD%CF%84%CE%B7%CF%82
+- https://sv.wikipedia.org/wiki/Varghunden
+- https://ja.wikipedia.org/wiki/%E7%99%BD%E7%89%99
+- https://pt.wikipedia.org/wiki/White_Fang
+- https://es.wikipedia.org/wiki/Colmillo_Blanco
+- https://en.wikipedia.org/wiki/White_Fang
+- https://io.wikipedia.org/wiki/Blanka_hoko
+- https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D1%8B%D0%B9_%D0%9A%D0%BB%D1%8B%D0%BA_(%D1%80%D0%BE%D0%BC%D0%B0%D0%BD)
+- https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%87%E0%A6%9F_%E0%A6%AB%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%99
+- https://ro.wikipedia.org/wiki/Col%C8%9B_Alb
+- https://et.wikipedia.org/wiki/Valgekihv
+- https://fr.wikipedia.org/wiki/Croc-Blanc
+- https://zh.wikipedia.org/wiki/%E7%99%BD%E7%89%99_(%E6%9D%B0%E5%85%8B%C2%B7%E4%BC%A6%E6%95%A6%E5%B0%8F%E8%AF%B4)
+- https://pl.wikipedia.org/wiki/Bia%C5%82y_Kie%C5%82
+- https://da.wikipedia.org/wiki/Ulvehunden
+- https://ru.wikiquote.org/wiki/%D0%91%D0%B5%D0%BB%D1%8B%D0%B9_%D0%9A%D0%BB%D1%8B%D0%BA_(%D1%80%D0%BE%D0%BC%D0%B0%D0%BD)
+- https://hu.wikipedia.org/wiki/Feh%C3%A9r_Agyar_(reg%C3%A9ny)
+- https://ka.wikipedia.org/wiki/%E1%83%97%E1%83%94%E1%83%97%E1%83%A0%E1%83%98_%E1%83%94%E1%83%A8%E1%83%95%E1%83%98
+- https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%86%D8%A7%D8%A8_%D8%A7%D9%84%D8%A3%D8%A8%D9%8A%D8%B6
+- https://nl.wikipedia.org/wiki/White_Fang_(boek)
+- https://cs.wikipedia.org/wiki/B%C3%ADl%C3%BD_tes%C3%A1k
+- https://de.wikipedia.org/wiki/Wolfsblut_(Roman)
+- https://eu.wikipedia.org/wiki/Letagin_zuri
+- https://hy.wikipedia.org/wiki/%D5%8D%D5%BA%D5%AB%D5%BF%D5%A1%D5%AF_%D4%BA%D5%A1%D5%B6%D5%AB%D6%84_(%D5%BE%D5%A5%D5%BA)
+- https://it.wikipedia.org/wiki/Zanna_Bianca
+- https://ca.wikipedia.org/wiki/Ullal_Blanc
+- https://tr.wikipedia.org/wiki/Beyaz_Di%C5%9F_(roman)
+- https://he.wikipedia.org/wiki/%D7%A4%D7%A0%D7%92_%D7%94%D7%9C%D7%91%D7%9F
