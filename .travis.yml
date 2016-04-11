@@ -1,0 +1,59 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+- gem install asciidoctor -v 1.5.2 
+- gem install tilt
+- sudo pip install git+https://github.com/rdhyee/ebooklib.git
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+- asciidoctor -a toc,idprefix=xx_,version=$VERSION -b xhtml5 -T ./asciidoctor-htmlbook/htmlbook-autogen/
+  -d book book.asciidoc -o book.html
+- git clone https://github.com/gitenberg-dev/HTMLBook
+
+# make book.html available to jinja2 environment by putting it into templates
+- cp book.html asciidoctor-htmlbook/gitberg-machine/templates/
+
+- /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
+- xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
+- cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
+# look for first images directory and one found, copy over to ./OEBPS
+- find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
+- zip -rX book.epub mimetype
+- zip -rX book.epub OEBPS/ META-INF/
+- if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
+- mv book.epub White-Fang.epub
+- ebook-convert White-Fang.epub White-Fang.mobi
+- xvfb-run ebook-convert White-Fang.epub White-Fang.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: KADpNCJPNAqgIkzQ/hSlamPc2MO+10d39Cw7j8aNjVhsuAVHO1q0aDoZleUPaxdPU5+77/lK3h0emuQvGhsJhgR1on+Apo7TUbleE9p3gc0B5yNLqBgCmqXgttTGSYG7c4/AYgqrLTNf7VHF4uSSuQGUVg56oscNks2krAOawUt3tddKmXe3a73wtYgPYPUYqjx3gKcTlpA+gHbUF9rbHSbHMKXsD6xp3qXqOBxWxAFYS9RfbqgcRayaaCHZlS73LFgJgxkFJ8Aug4MdLW775VY0oTyGrg0gVvDt4qOWdR7CAvYa2aa/HQUpLHwqgZltiMUE1a6AH9ttztRet7aiuMFiWc8iaAodZV69wM96nw0Ii01dN6e9POYHsFuJ+rwKxFd8StB2LclhRdBnuW245uCUVaTUAHvAOCSZl/RgPuXxivDqykDz6wSfrHyh+EMsAfJxhuvoNTVOHpm4wmDN2+K4YcwrQ8UQiR/MUG20Fk9UHXEokuD46vuHxVgQLaM5hcB3nv0IZ8v6BVgGs8k5sjCpdgeqKaeLT7+tWH7FZUzYhwuOfzqApzjo7E/OBtsuQjKX0HftZNGPIslwVvDdTXbzjoktJg9CvgeaJelTiYD+7zYMzezw/swXggaoVnSObk7CM4GtJUs3/YgAF+tlRnqlAoGyhMlCOHGDrcJpQD8=
+  file:
+    - White-Fang.epub
+    - White-Fang.mobi
+    - White-Fang.pdf
+  "on":
+    repo: GITenberg/White-Fang_910
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
